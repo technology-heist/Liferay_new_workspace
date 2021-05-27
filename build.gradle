@@ -3,7 +3,7 @@ apply plugin: 'maven'
 
 repositories {
     maven {
-          url "http://localhost:8081/nexus/content/groups/public"
+          url "http://localhost:8081/repository/maven-public/"
     }
 }
 
@@ -16,7 +16,7 @@ dependencies {
 uploadArchives {
     repositories {
        mavenDeployer {
-             repository(url: "http://localhost:8081/nexus/content/repositories/snapshots") {
+             repository(url: "http://localhost:8081/repository/maven-snapshots/") {
              authentication(userName: "admin", password: "Liferay1!")
 }
              pom.version = "1.0-SNAPSHOT"
